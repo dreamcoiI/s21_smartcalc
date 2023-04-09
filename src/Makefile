@@ -22,8 +22,7 @@ install: clean
 	rm -rf uninstall/untitled3.pro.user
 	chmod 777 untitled3.app/
 	open untitled3.app/Contents/MacOS/untitled3
-	# # open Contents/
-	# #open MacOS.app/
+
 	
 uninstall:
 	rm -rf build
