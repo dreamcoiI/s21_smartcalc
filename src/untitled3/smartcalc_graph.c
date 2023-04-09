@@ -3,6 +3,7 @@
 This file contains main functions needed to calculate graph points array
 */
 
+
 #include "stack.h"
 
 /**
