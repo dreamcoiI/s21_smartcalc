@@ -3,6 +3,7 @@
 This file contains main functions needed for stack work
 */
 
+
 #include "stack.h"
 
 /**
