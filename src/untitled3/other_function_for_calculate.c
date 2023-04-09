@@ -17,7 +17,7 @@ void normal_for_calc(Stack_t *stack) {
     while (next_stack->next != NULL) {
       if (check_normal_for_calc1(next_stack, prev_stack)) {
         if (!strcmp(next_stack->func, "-"))
-          next_stack->next->num *= -1;  // унарный минус
+          next_stack->next->num *= -1;  
         Stack_t *next_stack2 = next_stack;
         next_stack = next_stack->next;
         prev_stack->next = next_stack;
@@ -95,44 +95,6 @@ int value_operator(char *func) {
 }
 
 /**
- * Gets rid of unary -: for example, converts -(3-5)-2 to (-1*(3-5))-2
- \param[in] stack Pointer to unary -1
-*/
-
-// void is_negative(Stack_t *stack) {
-//   Stack_t *stack_current = stack;
-//   Stack_t *stack_next = stack->next;
-//   stack_current->func[0] = '(';
-//   Stack_t *stack_minus;
-//   Stack_t *stack_multiply;
-//   Stack_t *stack_final;
-//   stack_minus = (Stack_t *)calloc(1, sizeof(Stack_t));
-//   stack_multiply = (Stack_t *)calloc(1, sizeof(Stack_t));
-//   stack_final = (Stack_t *)calloc(1, sizeof(Stack_t));
-//   stack_minus->is_num = 1;
-//   stack_minus->num = -1.0;
-//   stack_multiply->is_num = 0;
-//   stack_multiply->func = (char *)calloc(2, sizeof(char));
-//   stack_multiply->func[0] = '*';
-//   stack_final->func = (char *)calloc(2, sizeof(char));
-//   stack_final->func[0] = ')';
-//   stack_current->next = stack_minus;
-//   stack_minus->next = stack_multiply;
-//   stack_multiply->next = stack_next->next;
-//   int bracket = 1;
-//   while (bracket) {
-//     stack_current = stack_current->next;
-//     if (stack_current->is_num == 0 && !strcmp(stack_current->func, ")"))
-//       bracket -= 1;
-//     if (stack_current->is_num == 0 && !strcmp(stack_current->func, "("))
-//       bracket += 1;
-//   }
-//   stack_next = stack_current->next;
-//   stack_current->next = stack_final;
-//   stack_final->next = stack_next;
-// }
-
-/**
  * Checks if expression can be calculated\n
  * Uses special code prev for defining the type of previous stack element:\n
  0 -- start of expression\n
@@ -161,7 +123,6 @@ int func_check(Stack_t *stack) {
   Stack_t *next_stack = stack->next;
   while (next_stack != NULL) {
     if (next_stack->is_num == 1 || next_stack->is_num == 2) {
-      // if (prev == 1 || prev == 3) func_code = 1;
       prev = 1;
       count = 0;
     } else {
