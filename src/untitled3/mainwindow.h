@@ -2,8 +2,8 @@
 #define MAINWINDOW_H
 
 #include <qvector.h>
-
 #include <QMainWindow>
+
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
