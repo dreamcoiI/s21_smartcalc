@@ -17,8 +17,6 @@ MainWindow::~MainWindow()
 }
 
 
-
-
 void MainWindow::on_pushButton_1_clicked()
 {
 
