@@ -14,12 +14,10 @@
  *
  */
 
-
 /*!
 \file
 This file contains definitions of all C functions used in project
 */
-
 
 #ifndef STACK_H
 #define STACK_H
