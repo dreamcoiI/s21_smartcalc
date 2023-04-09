@@ -5,13 +5,6 @@ This file contains main functions needed for calculator work
 
 #include "stack.h"
 
-// int main() {
-//   int error = 0;
-//   double x = 0.0;
-//   error = calcsmart("sqrt(*1-(5+2))", &x, 0);
-//   printf("hello");
-// }
-
 /**
  * Calculates expression from string
  \param[in] str Expression string
@@ -23,7 +16,6 @@ This file contains main functions needed for calculator work
 int calcsmart(const char* str, double* res, double x_flag) {
   int err_code = 0;
   Stack_t* stack;
-  // printf("\nhello");
   stack = (Stack_t*)calloc(1, sizeof(Stack_t));
   if (stack != NULL) {
     stack->is_num = -1;
@@ -37,7 +29,6 @@ int calcsmart(const char* str, double* res, double x_flag) {
     err_code = 1;
   }
   free_stack(stack);
-  // printf("%lf\n", *res);
   return err_code;
 }
 
