@@ -222,7 +222,7 @@ void MainWindow::on_Graph_button_clicked()
     y.clear();
     ui->widget->clearGraphs();
     ui->widget->replot();
-    h = 0.5;
+    h = 0.05;
 
     double xmax = ui->X_max_edit->text().toDouble();
     double xmin = ui->X_min_edit->text().toDouble();
