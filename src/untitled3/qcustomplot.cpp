@@ -42,6 +42,7 @@
 
 /* start documentation of inline functions */
 
+
 /*! \fn void QCPVector2D::setX(double x)
   
   Sets the x coordinate of this vector to \a x.
