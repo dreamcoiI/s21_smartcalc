@@ -22,7 +22,6 @@ Stack_t *to_polskiy(Stack_t *stack) {
   stack_current->is_num = -1;
   r_stack->is_num = -1;
   while (stack_next != NULL) {
-    // printf("here");
     if (stack_next->is_num != 0) push(r_stack, 1, stack_next->num, NULL);
     if (stack_next->is_num == 0) {
       int val_oper = value_operator(stack_next->func);
