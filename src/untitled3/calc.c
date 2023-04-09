@@ -14,7 +14,6 @@ stack
 
 int calc_from_notation(Stack_t* stack, double* res) {
   int err_code = 0;
-  printf("\n");
   if (size_stack(stack) > 1) {
     while (stack != NULL && stack->next != NULL && stack->next->next != NULL &&
            size_stack(stack) > 1) {
